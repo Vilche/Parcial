@@ -1,5 +1,5 @@
 /*Desarrollo de modulo1 para errores osiosi*/
-module.exports =(Empleados,horas,precio,TotalMaterial,callback)=>{
+module.exports =(empleados,horas,precio,totalMaterial,callback)=>{
 	Modulo1=0;
 		if (horas <=0  ||  precio<=0){
 				callback(new Error("No uses numeros negativos o ceros Crack"),null
@@ -7,9 +7,9 @@ module.exports =(Empleados,horas,precio,TotalMaterial,callback)=>{
 	}
 	else {
 			callback(null, {
-					Total:()=> (Modulo1 +=((horas*Empleados)*precio)),
-						TotalProyecto:()=> (TotalMaterial+Modulo1),
-								Holgura:()=> (Modulo1*0.08),
+					Total:()=> (Modulo1 +=((horas*empleados)*precio)),
+						TotalProyecto:()=> (totalMaterial+Modulo1),
+								Holgura:()=> (totalMaterial+Modulo1*0.08),
 	  });
 	}
 }
