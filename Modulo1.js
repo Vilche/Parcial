@@ -8,8 +8,8 @@ module.exports =(empleados,horas,precio,totalMaterial,callback)=>{
 	else {
 			callback(null, {
 					Total:()=> (Modulo1 +=((horas*empleados)*precio)),
-						TotalProyecto:()=> (totalMaterial+Modulo1),
-								Holgura:()=> (totalMaterial+Modulo1*0.08),
+						TotalProyecto:()=> (Proyect = (totalMaterial+Modulo1)),
+								Holgura:()=> (Proyect*0.08),
 	  });
 	}
 }
